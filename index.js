@@ -2,7 +2,8 @@ const Waxpeer =require('waxpeer')
 const WP = new Waxpeer.Waxpeer('c71343cc53d1be7df9eec017ab7c522254ee14426f188cbcba5aebf58187ea31')
 const express=require('express')
 app=express()
-app.get('/',()=>{
+app.get('/',(res,req)=>{
+       res.send("Working!!");
 var item_id_array,item_name_array;
 let search = function(element) {
         return WP.searchItems(element);
