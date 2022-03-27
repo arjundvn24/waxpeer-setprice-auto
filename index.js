@@ -1,5 +1,8 @@
-import { Waxpeer } from 'waxpeer'
-const WP = new Waxpeer('c71343cc53d1be7df9eec017ab7c522254ee14426f188cbcba5aebf58187ea31')
+const Waxpeer =require('waxpeer') 
+const WP = new Waxpeer.Waxpeer('c71343cc53d1be7df9eec017ab7c522254ee14426f188cbcba5aebf58187ea31')
+const express=require('express')
+app=express()
+app.get('/',()=>{
 var item_id_array,item_name_array;
 let search = function(element) {
         return WP.searchItems(element);
@@ -30,3 +33,5 @@ let update =function(item_id,toSetprice){
         })
     }
 })
+})
+app.listen(3000)
