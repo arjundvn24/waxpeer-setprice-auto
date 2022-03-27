@@ -34,4 +34,6 @@ let update =function(item_id,toSetprice){
     }
 })
 })
-app.listen(3000)
+app.listen(3000,()=>{
+        console.log("Server Running on 3000")
+})
